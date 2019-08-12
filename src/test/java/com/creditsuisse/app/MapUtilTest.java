@@ -10,7 +10,7 @@ import com.creditsuisse.app.configuration.MapUtil;
 public class MapUtilTest {
 	
 	@Test
-	public void testInstanceCreatedOnce() {
+	public void testInstanceCreatedOnlyOnce() {
 		MapUtil util1 = MapUtil.getInstance();
 		MapUtil util2 = MapUtil.getInstance();
 
