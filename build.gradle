@@ -35,7 +35,30 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-aop'
 	compile 'org.springframework.boot:spring-boot-starter-batch'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-
+	
+	// HSQLDB
+	runtime "org.hsqldb:hsqldb"
+	
+	// tried h2 and verified the results in h2 console.
+	//runtime "com.h2database:h2"
+	
+	compile "ch.qos.logback:logback-classic:${logbackVersion}"
+    
+    compile 'org.json:json:20180130'
 
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split(',')
+    }
+}
+
+if (project.hasProperty('args') && hasProperty('mainClass')) {
+	task execute(type:JavaExec) {
+	   main = mainClass
+	   classpath = sourceSets.main.runtimeClasspath
+	   args project.getProperty('args')
+	}
 }
