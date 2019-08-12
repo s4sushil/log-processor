@@ -25,6 +25,7 @@ public class NotificationListener extends JobExecutionListenerSupport{
     public void afterJob(final JobExecution jobExecution) {
         if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
 			int count = jdbcTemplate.queryForObject("SELECT count(*) FROM event", Integer.class);
+			
 			LOGGER.info("Found <" + count + "> in the database.");
 			LOGGER.info("JOB FINISHED, verifying the results");
         }

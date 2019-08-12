@@ -50,10 +50,10 @@ public class BatchConfiguration {
     @Bean
     FlatFileItemReader<Event> reader() {
         FlatFileItemReader<Event> reader = new FlatFileItemReader<>();
-        System.out.println(":::::::: logFile" +logFile);
         if(logFile != null && !StringUtils.isEmpty(logFile)) {
         	reader.setResource(new FileSystemResource(logFile)); 
         } else {
+        	// Take default file, if no file passed in args.
         	reader.setResource(new ClassPathResource("test.log"));
         }
 
