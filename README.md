@@ -9,7 +9,7 @@ Flag any long events that take longer than 4ms with a column in the database cal
 
 Program can handle very large files due to TaskExecutor implementation.
 
-To run - install Gradle and go till the project path and run command : gradle bootRun -Pargs=<fileName>
+To run - install Gradle and go till the project path and run command : gradle bootRun -Pargs=$fileName
 
 example run -> gradle bootRun -Pargs=/Users/sushilchoudhary/Downloads/test.log
 
