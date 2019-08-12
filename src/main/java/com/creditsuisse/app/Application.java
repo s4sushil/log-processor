@@ -21,7 +21,7 @@ public class Application {
 			File inFile = new File(logFilePath);
 			if (!inFile.exists()) {
 				log.error("Json file does not exist. Provided Path:" + logFilePath);
-				throw new InvalidParameterException("Missing log filePath argument");
+				throw new InvalidParameterException("Missing log filePath argument.");
 			}
 			log.info("PATH:" + logFilePath);
 			System.setProperty("logFilePath", logFilePath);
