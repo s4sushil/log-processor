@@ -6,3 +6,5 @@
 {"id":"scsmbstgrd", "state":"FINISHED", "timestamp":1491377495216}
 {"id":"scsmbstgre", "state":"STARTED", "timestamp":1491377495217}
 {"id":"scsmbstgre", "state":"FINISHED", "timestamp":1491377495218}
+{"id":"scsmbstgrf", "state":"STARTED", "timestamp":1491377495211}
+{"id":"scsmbstgrf", "state":"FINISHED", "timestamp":1491377495218}

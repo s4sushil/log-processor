@@ -25,13 +25,13 @@ public class ApplicationTest {
 	JdbcTemplate jdbcTemplate;
 	
     @Test(expected = InvalidParameterException.class)
-    public void testRun_EmptyFilePath() throws IOException {
+    public void testRunEmptyFilePath() throws IOException {
         String[] args = {""};
         Application.main(args);
     }
 
     @Test(expected = InvalidParameterException.class)
-    public void testRun_InvalidFilePath() throws IOException {
+    public void testRunInvalidFilePath() throws IOException {
         String[] args = {"invalid"};
         Application.main(args);
     }
@@ -55,7 +55,7 @@ public class ApplicationTest {
 		assertThat(Files.lines(Paths.get(args[0])).count(), equalTo(count));
 
 		int alertCount = jdbcTemplate.queryForObject("SELECT count(*) FROM event where alert=true", Integer.class);
-		assertThat(1, equalTo(alertCount));
+		assertThat(2, equalTo(alertCount));
 	}
 
 }
