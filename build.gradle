@@ -37,10 +37,10 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	
 	// HSQLDB
-	runtime "org.hsqldb:hsqldb"
+	//runtime "org.hsqldb:hsqldb"
 	
 	// tried h2 and verified the results in h2 console.
-	//runtime "com.h2database:h2"
+	runtime "com.h2database:h2"
 	
 	compile "ch.qos.logback:logback-classic:${logbackVersion}"
     
